@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши котики - Уютный приют</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/cats.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <img src="../images/logo.png" alt="Логотип приюта">
+                <span>Уютный приют</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="cats.html" class="active">Наши котики</a></li>
+                <li><a href="help.html">Как помочь</a></li>
+                <li><a href="success-stories.html">Истории успеха</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="cats-main">
+        <div class="container">
+            <div class="page-header">
+                <h1>Наши пушистые друзья</h1>
+                <p>Каждый из них ждёт свою любящую семью</p>
+            </div>
+
+            <!-- Фильтры -->
+            <div class="filters-section">
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Пол:</label>
+                        <select id="filter-gender">
+                            <option value="all">Не важно</option>
+                            <option value="male">Кот</option>
+                            <option value="female">Кошка</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Возраст:</label>
+                        <select id="filter-age">
+                            <option value="all">Любой</option>
+                            <option value="kitten">Котёнок (до 1 года)</option>
+                            <option value="young">Молодой (1-3 года)</option>
+                            <option value="adult">Взрослый (3-8 лет)</option>
+                            <option value="senior">Пожилой (8+ лет)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Характер:</label>
+                        <select id="filter-character">
+                            <option value="all">Любой</option>
+                            <option value="calm">Спокойный</option>
+                            <option value="playful">Игривый</option>
+                            <option value="affectionate">Ласковый</option>
+                            <option value="independent">Независимый</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Приживается с:</label>
+                        <select id="filter-compatibility">
+                            <option value="all">Со всеми</option>
+                            <option value="children">С детьми</option>
+                            <option value="cats">С котами</option>
+                            <option value="dogs">С собаками</option>
+                        </select>
+                    </div>
+                    
+                    <button class="btn btn-secondary" id="reset-filters">Сбросить</button>
+                </div>
+                
+                <div class="sorting">
+                    <label>Сортировка:</label>
+                    <select id="sort-cats">
+                        <option value="newest">Сначала новые</option>
+                        <option value="oldest">Сначала давно в приюте</option>
+                        <option value="young">Сначала молодые</option>
+                        <option value="name">По имени (А-Я)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Сетка котиков -->
+            <div class="cats-grid" id="cats-container">
+                <!-- Котики будут загружены через JavaScript -->
+            </div>
+
+            <!-- Пагинация -->
+            <div class="pagination">
+                <button class="pagination-btn" id="prev-page">Назад</button>
+                <span class="page-info">Страница <span id="current-page">1</span></span>
+                <button class="pagination-btn" id="next-page">Вперед</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="../images/logo.png" alt="Логотип приюта">
+                        <span>Уютный приют</span>
+                    </div>
+                    <p>Дарим любовь и заботу каждому пушистому другу с 2009 года</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>📞 +7 (999) 123-45-67</p>
+                    <p>✉️ shelter@email.com</p>
+                    <p>📍 г. Москва, ул. Кошачья, д. 15</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Часы работы</h4>
+                    <p>Пн-Пт: 10:00 - 19:00</p>
+                    <p>Сб-Вс: 11:00 - 17:00</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Мы в соцсетях</h4>
+                    <div class="social-links">
+                        <a href="#">VK</a>
+                        <a href="#">Telegram</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Уютный приют для котиков. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/cats.js"></script>
+</body>
+</html>

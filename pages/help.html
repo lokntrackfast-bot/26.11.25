@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Как помочь - Уютный приют</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/help.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <img src="../images/logo.png" alt="Логотип приюта">
+                <span>Уютный приют</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="cats.html">Наши котики</a></li>
+                <li><a href="help.html" class="active">Как помочь</a></li>
+                <li><a href="success-stories.html">Истории успеха</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="help-main">
+        <div class="container">
+            <div class="page-header">
+                <h1>Как вы можете помочь</h1>
+                <p>Любая помощь важна для наших пушистых друзей</p>
+            </div>
+
+            <!-- Финансовая помощь -->
+            <section class="help-section">
+                <h2>Финансовая помощь</h2>
+                <div class="help-cards">
+                    <div class="help-card">
+                        <div class="help-card-icon">💳</div>
+                        <h3>Единоразовое пожертвование</h3>
+                        <p>Любая сумма поможет нам покупать корм, лекарства и содержать приют</p>
+                        <div class="payment-methods">
+                            <button class="btn btn-primary" onclick="showPaymentModal()">Пожертвовать</button>
+                            <div class="bank-details">
+                                <h4>Реквизиты для перевода:</h4>
+                                <p>Банк: Тинькофф</p>
+                                <p>Счёт: 5536 9138 1234 5678</p>
+                                <p>Получатель: Уютный приют</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="help-card">
+                        <div class="help-card-icon">📅</div>
+                        <h3>Регулярные пожертвования</h3>
+                        <p>Станьте постоянным помощником приюта с ежемесячными переводами</p>
+                        <button class="btn btn-outline">Подписаться</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Волонтерство -->
+            <section class="help-section">
+                <h2>Волонтёрство</h2>
+                <div class="volunteer-options">
+                    <div class="volunteer-card">
+                        <h3>Помощь в приюте</h3>
+                        <ul>
+                            <li>Уборка помещений</li>
+                            <li>Выгул и игры с котиками</li>
+                            <li>Помощь в кормлении</li>
+                            <li>Социализация животных</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="showVolunteerForm()">Стать волонтёром</button>
+                    </div>
+                    
+                    <div class="volunteer-card">
+                        <h3>Передержка</h3>
+                        <ul>
+                            <li>Временный дом для котика</li>
+                            <li>От 2 недель до 3 месяцев</li>
+                            <li>Все расходы за наш счёт</li>
+                            <li>Поддержка 24/7</li>
+                        </ul>
+                        <button class="btn btn-outline">Узнать о передержке</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Материальная помощь -->
+            <section class="help-section">
+                <h2>Материальная помощь</h2>
+                <div class="supplies-list">
+                    <h3>Что нам всегда нужно:</h3>
+                    <div class="supplies-grid">
+                        <div class="supply-item" data-item="food">
+                            <span class="supply-icon">🍗</span>
+                            <span class="supply-name">Сухой корм</span>
+                            <button class="supply-btn" onclick="toggleSupply('food')">Готов принести</button>
+                        </div>
+                        <div class="supply-item" data-item="litter">
+                            <span class="supply-icon">🧻</span>
+                            <span class="supply-name">Наполнитель</span>
+                            <button class="supply-btn" onclick="toggleSupply('litter')">Готов принести</button>
+                        </div>
+                        <div class="supply-item" data-item="toys">
+                            <span class="supply-icon">🎾</span>
+                            <span class="supply-name">Игрушки</span>
+                            <button class="supply-btn" onclick="toggleSupply('toys')">Готов принести</button>
+                        </div>
+                        <div class="supply-item" data-item="medicine">
+                            <span class="supply-icon">💊</span>
+                            <span class="supply-name">Лекарства</span>
+                            <button class="supply-btn" onclick="toggleSupply('medicine')">Готов принести</button>
+                        </div>
+                        <div class="supply-item" data-item="bowls">
+                            <span class="supply-icon">🥣</span>
+                            <span class="supply-name">Миски</span>
+                            <button class="supply-btn" onclick="toggleSupply('bowls')">Готов принести</button>
+                        </div>
+                        <div class="supply-item" data-item="beds">
+                            <span class="supply-icon">🛏️</span>
+                            <span class="supply-name">Лежанки</span>
+                            <button class="supply-btn" onclick="toggleSupply('beds')">Готов принести</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Информационная помощь -->
+            <section class="help-section">
+                <h2>Информационная помощь</h2>
+                <div class="info-help">
+                    <div class="info-card">
+                        <h3>Расскажите о нас</h3>
+                        <p>Поделитесь информацией о нашем приюте в социальных сетях</p>
+                        <div class="social-share">
+                            <button class="share-btn vk" onclick="shareOnVK()">VK</button>
+                            <button class="share-btn tg" onclick="shareOnTelegram()">Telegram</button>
+                            <button class="share-btn inst" onclick="shareOnInstagram()">Instagram</button>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>Станьте куратором</h3>
+                        <p>Возьмите опеку над конкретным котиком и помогайте ему регулярно</p>
+                        <button class="btn btn-primary">Стать куратором</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Модальное окно для пожертвований -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePaymentModal()">&times;</span>
+            <h2>Сделать пожертвование</h2>
+            <form class="donation-form">
+                <div class="form-group">
+                    <label>Сумма пожертвования:</label>
+                    <div class="amount-options">
+                        <button type="button" class="amount-btn" data-amount="100">100₽</button>
+                        <button type="button" class="amount-btn" data-amount="500">500₽</button>
+                        <button type="button" class="amount-btn" data-amount="1000">1000₽</button>
+                    </div>
+                    <input type="number" id="custom-amount" placeholder="Другая сумма">
+                </div>
+                <div class="form-group">
+                    <label>Ваше имя:</label>
+                    <input type="text" id="donor-name" placeholder="Как к вам обращаться?">
+                </div>
+                <button type="submit" class="btn btn-primary">Подтвердить</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <!-- Тот же футер, что и в index.html -->
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/help.js"></script>
+</body>
+</html>

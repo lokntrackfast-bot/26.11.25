@@ -1,0 +1,325 @@
+.help-main {
+    padding: 120px 0 50px;
+    min-height: 100vh;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.help-section {
+    margin-bottom: 4rem;
+}
+
+.help-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.help-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.help-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.help-card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.help-card h3 {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.help-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.bank-details {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: var(--accent-gray);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.bank-details h4 {
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.bank-details p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+}
+
+.volunteer-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.volunteer-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.volunteer-card h3 {
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.volunteer-card ul {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.volunteer-card li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--accent-gray);
+}
+
+.volunteer-card li:last-child {
+    border-bottom: none;
+}
+
+.supplies-list h3 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.supplies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.supply-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.supply-item:hover {
+    transform: translateY(-5px);
+}
+
+.supply-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.supply-name {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.supply-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--accent-mint);
+    background: transparent;
+    color: var(--accent-mint);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.9rem;
+}
+
+.supply-btn:hover {
+    background: var(--accent-mint);
+    color: white;
+}
+
+.info-help {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.info-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.info-card h3 {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.info-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.social-share {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.share-btn {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 600;
+}
+
+.share-btn.vk {
+    background: #4C75A3;
+}
+
+.share-btn.tg {
+    background: #2AABEE;
+}
+
+.share-btn.inst {
+    background: #E4405F;
+}
+
+.share-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close:hover {
+    color: var(--text-dark);
+}
+
+.donation-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.donation-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.amount-options {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.amount-btn {
+    flex: 1;
+    padding: 0.7rem;
+    border: 2px solid var(--accent-gray);
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.amount-btn:hover,
+.amount-btn.active {
+    border-color: var(--accent-mint);
+    background: var(--accent-mint);
+    color: white;
+}
+
+.donation-form input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--accent-gray);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.donation-form input:focus {
+    border-color: var(--accent-mint);
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .help-main {
+        padding: 100px 0 30px;
+    }
+    
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .help-cards,
+    .volunteer-options,
+    .info-help {
+        grid-template-columns: 1fr;
+    }
+    
+    .supplies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .social-share {
+        flex-direction: column;
+    }
+}

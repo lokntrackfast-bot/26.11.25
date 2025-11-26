@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог - Уютный приют</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .blog-main {
+            padding: 120px 0 50px;
+            min-height: 100vh;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .blog-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .blog-excerpt {
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            color: var(--accent-mint);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .read-more:hover {
+            color: var(--accent-brown);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <div class="logo-icon">🐱</div>
+                <span>Уютный приют</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="cats.html">Наши котики</a></li>
+                <li><a href="help.html">Как помочь</a></li>
+                <li><a href="success-stories.html">Истории успеха</a></li>
+                <li><a href="blog.html" class="active">Блог</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="blog-main">
+        <div class="container">
+            <div class="page-header">
+                <h1>Наш блог</h1>
+                <p>Полезные статьи и новости из жизни приюта</p>
+            </div>
+
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="../images/cat1.jpg" alt="Уход за котиками" onerror="this.style.display='none'">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">15 марта 2024</div>
+                        <h3 class="blog-title">Как правильно ухаживать за котиком</h3>
+                        <p class="blog-excerpt">Основные правила ухода за домашним питомцем: питание, гигиена, здоровье и воспитание...</p>
+                        <a href="#" class="read-more">Читать далее →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="../images/cat2.jpg" alt="Новые жители" onerror="this.style.display='none'">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">10 марта 2024</div>
+                        <h3 class="blog-title">Новые жители нашего приюта</h3>
+                        <p class="blog-excerpt">На этой неделе к нам поступили 5 новых котиков, которые ищут любящие семьи...</p>
+                        <a href="#" class="read-more">Читать далее →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="../images/cat3.jpg" alt="Волонтерство" onerror="this.style.display='none'">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">5 марта 2024</div>
+                        <h3 class="blog-title">Почему волонтерство важно</h3>
+                        <p class="blog-excerpt">Рассказываем о том, как волонтеры помогают нашим подопечным и как вы можете присоединиться...</p>
+                        <a href="#" class="read-more">Читать далее →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <div class="logo-icon">🐱</div>
+                        <span>Уютный приют</span>
+                    </div>
+                    <p>Дарим любовь и заботу каждому пушистому другу с 2009 года</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>📞 +7 (999) 123-45-67</p>
+                    <p>✉️ shelter@email.com</p>
+                    <p>📍 г. Москва, ул. Кошачья, д. 15</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Часы работы</h4>
+                    <p>Пн-Пт: 10:00 - 19:00</p>
+                    <p>Сб-Вс: 11:00 - 17:00</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Мы в соцсетях</h4>
+                    <div class="social-links">
+                        <a href="#">VK</a>
+                        <a href="#">Telegram</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Уютный приют для котиков. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

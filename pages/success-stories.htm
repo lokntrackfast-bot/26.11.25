@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Истории успеха - Уютный приют</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/success-stories.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <div class="logo-icon">🐱</div>
+                <span>Уютный приют</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="cats.html">Наши котики</a></li>
+                <li><a href="help.html">Как помочь</a></li>
+                <li><a href="success-stories.html" class="active">Истории успеха</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="success-stories-main">
+        <div class="container">
+            <div class="page-header">
+                <h1>Истории успеха</h1>
+                <p>Наши счастливые выпускники и их новые семьи</p>
+            </div>
+
+            <!-- Фильтры историй -->
+            <div class="stories-filters">
+                <div class="filter-group">
+                    <label for="filter-year">Год:</label>
+                    <select id="filter-year">
+                        <option value="all">Все годы</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filter-type">Тип истории:</label>
+                    <select id="filter-type">
+                        <option value="all">Все истории</option>
+                        <option value="adoption">Усыновление</option>
+                        <option value="foster">Передержка</option>
+                        <option value="rehabilitation">Реабилитация</option>
+                    </select>
+                </div>
+                <button class="btn btn-outline" id="reset-stories-filters">Сбросить</button>
+            </div>
+
+            <!-- Статистика -->
+            <div class="success-stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="total-stories">0</div>
+                    <div class="stat-label">Всего историй</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="this-year-stories">0</div>
+                    <div class="stat-label">В этом году</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="special-needs-stories">0</div>
+                    <div class="stat-label">С особыми потребностями</div>
+                </div>
+            </div>
+
+            <!-- Сетка историй -->
+            <div class="stories-grid" id="stories-container">
+                <!-- Истории будут загружены через JavaScript -->
+            </div>
+
+            <!-- Кнопка загрузки еще -->
+            <div class="load-more-container">
+                <button class="btn btn-primary" id="load-more-stories">Загрузить еще истории</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Модальное окно для полной истории -->
+    <div id="story-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-content">
+                <!-- Контент модального окна будет загружен через JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <div class="logo-icon">🐱</div>
+                        <span>Уютный приют</span>
+                    </div>
+                    <p>Дарим любовь и заботу каждому пушистому другу с 2009 года</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>📞 +7 (999) 123-45-67</p>
+                    <p>✉️ shelter@email.com</p>
+                    <p>📍 г. Москва, ул. Кошачья, д. 15</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Часы работы</h4>
+                    <p>Пн-Пт: 10:00 - 19:00</p>
+                    <p>Сб-Вс: 11:00 - 17:00</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Мы в соцсетях</h4>
+                    <div class="social-links">
+                        <a href="#">VK</a>
+                        <a href="#">Telegram</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Уютный приют для котиков. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/success-stories.js"></script>
+</body>
+</html>
